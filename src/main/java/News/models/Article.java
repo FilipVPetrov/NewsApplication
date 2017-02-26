@@ -1,4 +1,4 @@
-package News.controllers;
+package News.models;
 
 /**
  * Created by filip on 26.2.2017 г..
