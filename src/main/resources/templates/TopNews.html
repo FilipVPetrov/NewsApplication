@@ -23,7 +23,10 @@
 
 </head>
 
-<body class="en_AOC">
+
+<body>
+    <title>TopNews</title>
+
 <div id="wrapper" class="pt_content">
     <div id="main" role="main" class="full-width clearfix">
         <div id="primary" class="primary-content">
@@ -32,34 +35,45 @@
                 <div class="selection__wrapper selection__wrapper-is-left selection__wrapper-is-negative">
 
                     <section class="selection__group">
+                        <h2 class="selection__group-heading">Top News</h2>
 
-                        <h2 class="selection__group-heading">News Sources</h2>
+                        <main id="posts">
+                            <article th:each="art : ${allarticles}">
+                                <h2 class="title" th:text="${art.author}">Post Title</h2>
 
-                        <ul class="selection__list">
 
-                            <li class="selection__list-item--country">
-                                <a href="bild.jsp" th:href="@{/bild}">Bild</a>
-                            </li>
+                                <!--
+                                <div class="date">
+                                    <i>Posted on</i>
+                                    <span th:text="${#dates.format(p.date, 'dd-MMM-yyyy')}">22-May-2016</span>
+                                    <span th:if="${p.author}" th:remove="tag">
+                                  <i>by</i>
+                                  <span th:text="${p.author.fullName != null ?
+                                                p.author.fullName : p.author.username}">Svetlin Nakov</span>
+                                </span>
+                                </div>
+                                -->
 
-                            <li class="selection__list-item--country">
+                            </article>
+                        </main>
 
-                                <a class="selection__list-item-link--country"
-                                   href="https://www.hugoboss.com/be/nl/home">
-                                    Boomberg
-                                </a>
-                            </li>
-
-                            <li class="selection__list-item--country"/>
-
-                        </ul>
                     </section>
+                </div>
+                <div class="selection__background">
+                    <!-- CMS-PREVIEW-SLOT-country-select-START -->
 
-                 </div>
+                    <img src="http://images.hugoboss.com/is/image/boss/language_select_bg?$marketing_asset$"
+                         alt="country selection"/>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
 </body>
+
 
 </html>
 </html>

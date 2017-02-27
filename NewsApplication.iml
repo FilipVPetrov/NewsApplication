@@ -51,6 +51,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.5.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.5.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.json:javax.json-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-client:1.8" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-core:1.8" level="project" />
   </component>
