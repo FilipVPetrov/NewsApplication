@@ -17,6 +17,7 @@ public class Article {
 
     private String publishedAt;
 
+
     public String getAuthor() {
         return author;
     }

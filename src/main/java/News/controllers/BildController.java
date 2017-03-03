@@ -16,12 +16,9 @@ public class BildController {
 
     @RequestMapping("/bild")
     public String index(Model model){
-//        ModelAndView model = new ModelAndView("bild");
-//        model.addObject("lists", ModelImpl.getAllArticles());
-        List<Article> allArticle = ModelImpl.getAllArticles();
+        List<Article> allArticle = NewsController.getAllArticles("bild");
         model.addAttribute("allarticles", allArticle);
-//        return ModelImpl.getAllArticles();
-        return "TopNews";
+        return "home";
     }
 
 }

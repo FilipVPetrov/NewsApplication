@@ -17,14 +17,13 @@ import com.sun.jersey.api.client.WebResource;
  * Created by filip on 26.2.2017 г..
  */
 
-public class ModelImpl {
+public class NewsModel {
 
-    public static List<Article> getAllArticles() {
+    public static List<Article> getAllArticles(String url) {
         List<Article> allArticles = new ArrayList<Article>();
         Client client = Client.create();
 
-        WebResource webResource = client.resource(
-                "https://newsapi.org/v1/articles?source=bloomberg&sortBy=top&apiKey=030df3ce40f34b1a8a2f410dddac8528");
+        WebResource webResource = client.resource(url);
 
         ClientResponse response = webResource.accept("application/json").get(ClientResponse.class);
 

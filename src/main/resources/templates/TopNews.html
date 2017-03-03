@@ -35,13 +35,14 @@
                 <div class="selection__wrapper selection__wrapper-is-left selection__wrapper-is-negative">
 
                     <section class="selection__group">
-                        <h2 class="selection__group-heading">Top News</h2>
+                        <h2 class="selection__group-heading"> <b>Top News</b></h2>
 
                         <main id="posts">
                             <article th:each="art : ${allarticles}">
-                                <h2 class="title" th:text="${art.author}">Post Title</h2>
-
-
+                                <img th:src="${art.urlToImage}"  height="200" width="200" border="0"/>
+                                <h2 class="title" th:text="${art.title}">Post Title</h2>
+                                <h3 class="description" th:text="${art.description}">Description</h3>
+                                <!--<a href="#" th:href="@{/products}">Article</a>-->
                                 <!--
                                 <div class="date">
                                     <i>Posted on</i>

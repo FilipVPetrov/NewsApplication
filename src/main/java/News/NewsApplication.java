@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class NewsApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
+
         SpringApplication.run(NewsApplication.class, args);
     }
 }
